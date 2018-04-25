@@ -26,7 +26,7 @@ def main(filename):
             import string
             word=word.strip(string.punctuation)
             # check if word is not empty
-            if word!=None and word !="":
+            if word:
                 # append the word to "all_words" list
                 all_words.append(word)
 
