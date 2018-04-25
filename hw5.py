@@ -2,6 +2,7 @@
 
 import csv 
 import json
+import pickle
 from collections import Counter
 
 def main(filename):
@@ -17,7 +18,7 @@ def main(filename):
         # split a line of text into a list words
         # "I have a dream." => ["I", "have", "a", "dream."]
         words = line.split()
-
+        line=line.strip
         # check the format of words and append it to "all_words" list
         for word in words:
             # then, remove (strip) unwanted punctuations from every word
@@ -33,6 +34,7 @@ def main(filename):
     
  
     count=Counter(all_words)
+    count.most_common()
 
     # dump to a csv file named "wordcount.csv":
     # word,count
